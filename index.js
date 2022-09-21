@@ -1,13 +1,14 @@
 let count=0
-let entries=[0,5]
+let entries=[]
 
 function increment(){
     count+=1
-    document.getElementById("count-el") = count
+    document.getElementById("count-el").textContent=count
 }
 
 function save(){
     entries.push(count)
-    document.getElementById("save-el") = count
+    let entriesText= "Previous entries: " + entries.toString()
+    document.getElementById("save-el").textContent=entriesText
 
 }
